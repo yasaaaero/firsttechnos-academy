@@ -1,0 +1,431 @@
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* =====================================
+   FIRSTTECHNOS ACADEMY - GLOBAL STYLE
+===================================== */
+
+body {
+    margin: 0;
+    background: #ffffff;
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+nav.navbar {
+    background: linear-gradient(
+        180deg,
+        #071fa8 0%,
+        #1b4dcc 100%
+    ) !important;
+}
+
+/* =====================================
+   HOME HERO GRADIENT
+===================================== */
+
+.fta-hero {
+    min-height: 680px;
+    margin: 0;
+    padding: 0 6%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 0;
+    color: #ffffff;
+
+    background: linear-gradient(
+        180deg,
+        #1b4dcc 0%,
+        #347de5 30%,
+        #70baf5 60%,
+        #c5eafb 82%,
+        #ffffff 100%
+    );
+}
+
+/* Logo di pojok kiri atas */
+
+.fta-hero-header {
+    padding-top: 28px;
+}
+
+.fta-logo-link {
+    display: inline-block;
+    line-height: 0;
+}
+
+.fta-logo {
+    display: block;
+    width: 230px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: normal;
+}
+
+/* =====================================
+   HERO CONTENT
+===================================== */
+
+.fta-hero-content {
+    width: 100%;
+    max-width: 760px;
+    margin: auto 0;
+    padding: 65px 0 90px;
+}
+
+.fta-label {
+    display: inline-block;
+    margin-bottom: 22px;
+    padding: 9px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.fta-hero-content h1 {
+    margin-bottom: 24px;
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: #ffffff;
+}
+
+.fta-hero-content h1 span {
+    color: #d5f4ff;
+}
+
+.fta-hero-content p {
+    max-width: 590px;
+    margin-bottom: 30px;
+    color: #f0f8ff;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.fta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.fta-button-primary,
+.fta-button-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.fta-button-primary {
+    background: #ffffff;
+    color: #123bb5;
+}
+
+.fta-button-primary:hover {
+    background: #e8f7ff;
+    color: #071fa8;
+    transform: translateY(-2px);
+}
+
+.fta-button-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+}
+
+.fta-button-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+/* =====================================
+   BOTTOM NOTE
+===================================== */
+
+.fta-bottom-note {
+    padding: 18px 0 24px;
+    color: #1745a8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 576px) {
+    .fta-hero {
+        min-height: 620px;
+        padding: 0 22px;
+    }
+
+    .fta-logo {
+        width: 185px;
+    }
+
+    .fta-hero-content {
+        padding: 55px 0;
+    }
+
+    .fta-hero-content h1 {
+        letter-spacing: -0.8px;
+    }
+
+    .fta-hero-content p {
+        font-size: 1rem;
+    }
+
+    .fta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fta-bottom-note {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+}
+
+/* FIX: HOME FULL WIDTH TANPA KOTAK PUTIH */
+
+body:has(.fta-hero) {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #071fa8 !important;
+}
+
+/* Hilangkan jarak container di halaman Home */
+body:has(.fta-hero) main.container,
+body:has(.fta-hero) main.container-fluid,
+body:has(.fta-hero) .container:has(.fta-hero),
+body:has(.fta-hero) .container-fluid:has(.fta-hero) {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Bentangkan gradasi sampai tepi layar */
+body:has(.fta-hero) .fta-hero {
+    width: 100% !important;
+    min-height: 680px;
+    margin: 0 !important;
+    padding: 0 6%;
+    border-radius: 0 !important;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        180deg,
+        #1b4dcc 0%,
+        #347de5 30%,
+        #70baf5 60%,
+        #c5eafb 82%,
+        #ffffff 100%
+    ) !important;
+}
+
+body:has(.fta-hero) main,
+body:has(.fta-hero) main > .container,
+body:has(.fta-hero) main > .container-fluid {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Warna navbar menyambung ke Home */
+body:has(.fta-hero) nav.navbar {
+    margin-bottom: 0 !important;
+    background: #1b4dcc !important;
+}
+
+@media (max-width: 576px) {
+    body:has(.fta-hero) .fta-hero {
+        min-height: 620px;
+        padding: 0 22px;
+    }
+}
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.navbar-logo {
+    display: block;
+    width: 230px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: normal;
+}
+
+@media (max-width: 576px) {
+    .navbar-logo {
+        width: 175px;
+    }
+}
+
+nav.navbar {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+nav.navbar .container,
+nav.navbar .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+}
+
+nav.navbar .navbar-brand {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+nav.navbar .navbar-logo {
+    width: 230px;
+    height: auto;
+    display: block;
+    mix-blend-mode: normal;
+}
+
+body {
+    background: linear-gradient(
+        180deg,
+        #1b4dcc 0%,
+        #347de5 30%,
+        #70baf5 60%,
+        #c5eafb 82%,
+        #ffffff 100%
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+nav.navbar {
+    background: linear-gradient(
+        180deg,
+        #071fa8 0%,
+        #1b4dcc 100%
+    ) !important;
+}
+
+main,
+main.container,
+main.container-fluid {
+    background: transparent !important;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.96);
+}
+
+h1,
+h2,
+h3 {
+    color: inherit;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    background: #c5eafb !important;
+}
+
+nav.navbar {
+    background: linear-gradient(
+        180deg,
+        #071fa8 0%,
+        #1b4dcc 100%
+    ) !important;
+}
+
+body:not(:has(.fta-hero)) main,
+body:not(:has(.fta-hero)) main.container,
+body:not(:has(.fta-hero)) main.container-fluid {
+    background: linear-gradient(
+        180deg,
+        #1b4dcc 0%,
+        #347de5 30%,
+        #70baf5 60%,
+        #c5eafb 82%,
+        #ffffff 100%
+    ) !important;
+
+    min-height: calc(100vh - 150px);
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 48px 6% !important;
+    box-sizing: border-box;
+}
+
+body:not(:has(.fta-hero)) main .container,
+body:not(:has(.fta-hero)) main .container-fluid {
+    background: transparent !important;
+}
+
+body:has(.fta-hero) .fta-hero {
+    background: linear-gradient(
+        180deg,
+        #1b4dcc 0%,
+        #347de5 30%,
+        #70baf5 60%,
+        #c5eafb 82%,
+        #ffffff 100%
+    ) !important;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.96);
+}
+
+body:not(:has(.fta-hero)) main h1,
+body:not(:has(.fta-hero)) main h2,
+body:not(:has(.fta-hero)) main h3 {
+    color: #ffffff !important;
+}
+
+body:not(:has(.fta-hero)) main p {
+    color: #ffffff !important;
+}
+
+body:not(:has(.fta-hero)) main .text-secondary {
+    color: #f0f6ff !important;
+}
+
+body:not(:has(.fta-hero)) main .text-center h1,
+body:not(:has(.fta-hero)) main .text-center p {
+    color: #ffffff !important;
+}
+
+body:not(:has(.fta-hero)) main .card h1,
+body:not(:has(.fta-hero)) main .card h2,
+body:not(:has(.fta-hero)) main .card h3,
+body:not(:has(.fta-hero)) main .card h5,
+body:not(:has(.fta-hero)) main .card p {
+    color: #212529 !important;
+}
+
+body:not(:has(.fta-hero)) main .card .text-primary {
+    color: #3768f5 !important;
+}
